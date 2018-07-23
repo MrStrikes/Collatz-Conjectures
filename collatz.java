@@ -2,12 +2,12 @@ import java.util.*;
 
 public class collatz {
 	public static void main(String[] args) {
-        int num = 1;
-        int counterMax = 0;
+        long num = 1;
+        long counterMax = 0;
         while (true)
         {
-            int calc = num;
-            int counter = 1;
+            long calc = num;
+            long counter = 1;
             while (calc != 1)
             {
                 if (calc%2 == 0)
@@ -22,10 +22,9 @@ public class collatz {
             if (counterMax < counter)
             {
                 counterMax = counter;
-                System.out.println("Java Collatz from " + Integer.toString(num) + " of len " + Integer.toString(counter));
+                System.out.println("Java Collatz from " + Long.toString(num) + " of len " + Long.toString(counter));
             }
             num++;
         }
 	}
-
 }
