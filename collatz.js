@@ -13,7 +13,7 @@ while (true) {
     }
     if (counterMax < counter) {
         counterMax = counter
-        console.log(`Collatz from ${num} of len ${counter}`)
+        console.log(`JS Collatz from ${num} of len ${counter}`)
     }
     num++
 }

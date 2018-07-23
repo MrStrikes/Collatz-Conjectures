@@ -22,7 +22,7 @@ func main() {
 
 		if counterMax < counter {
 			counterMax = counter
-			fmt.Println("Collatz from " + strconv.Itoa(num) + " of len " + strconv.Itoa(counter))
+			fmt.Println("Golang Collatz from " + strconv.Itoa(num) + " of len " + strconv.Itoa(counter))
 		}
 		num++
 	}

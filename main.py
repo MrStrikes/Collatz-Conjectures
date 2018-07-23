@@ -12,5 +12,5 @@ while True:
     
     if counterMax < counter:
         counterMax = counter
-        print('Collatz from ' + str(num) + " of len " + str(counter))
+        print('Python Collatz from ' + str(num) + " of len " + str(counter))
     num += 1

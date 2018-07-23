@@ -15,7 +15,7 @@ while (true) {
     }
     if ($counterMax < $counter) {
         $counterMax = $counter;
-        echo "Collatz from ".$num." of len ".$counter."\n";
+        echo "PHP Collatz from ".$num." of len ".$counter."\n";
     }
     $num++;
 }
