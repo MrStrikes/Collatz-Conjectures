@@ -1,51 +1,29 @@
-public static string collatz(string y)
-{
-    if (y == null)
-    {
-        return null;
-    }
+public class collatz
+{	
+	public static void Main()
+	{
+		long num = 1;
+		long counterMax = 0;
+		while (true)
+		{
+			long calc = num;
+			long counter = 1;
+			while (calc != 1)
+			{
+				if (calc%2 == 0)
+				{
+					calc = calc / 2;
+				} else {
+					calc = 3*calc + 1;
+				}
+				counter++;
+			}
 
-    int x = int.Parse(y); //x is my "n"
-    var results = new StringBuilder();
-    results.Append(x.ToString());
-    int largest = x; //keep track of biggest number
-
-    while (x > 1)
-    {
-        if (x % 2 == 0)
-        {
-            x = x / 2;
-            if (x > largest)
-            {
-                largest = x;
-            }
-            if (x != 1)
-            {
-                results.Append(" " + x.ToString());
-            }
-            if (x == 1)
-            {
-                results.Append(" " + x.ToString());
-                results.Append(" largest number was " + largest.ToString());
-                return results.ToString();
-            }
-        }
-
-        if (x % 2 != 0)
-        {
-            if (x == 1)
-            {
-                results.Append(" " + x.ToString());
-                results.Append(" largest number was " + largest.ToString());
-                return results.ToString();
-            }
-            x = (3 * x) + 1;
-            if (x > largest)
-            {
-                largest = x;
-            }
-            results.Append(" " + x.ToString());
-        }
-    }
-    return results.ToString();
+			if (counterMax < counter) {
+				counterMax = counter;
+				System.Console.WriteLine("C# Collatz from " + num.ToString() + " of len " + counter.ToString());
+			}
+			num++;
+		}
+	}
 }
